@@ -1,7 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+//component App
+
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  //expression
   return (
     <div className="App">
       <header className="App-header">

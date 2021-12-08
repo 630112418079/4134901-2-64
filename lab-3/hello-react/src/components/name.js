@@ -1,9 +1,10 @@
 function MyName() {
-    return(
+  return (
     <div className="MyName">
-        <div>ไตรรงค์  สรรพอำไพ</div>
-        <div>630112418079</div>
+      <div>ดรัสวิน วงศ์ปรเมษฐ์</div>
+      <div>4430201834</div>
     </div>
-);
+  );
 }
+
 export default MyName;
