@@ -2,38 +2,35 @@ import React from "react";
 
 //stateful
 
-class Wheel extends React.Component {
-  constructor() {
-    super();
-    const wheels = [2, 4 ,6, 8, 10];
-      }
-  render() {
-    return <>{this.state.lenght >0 && <p>I have 4 wheels.</p>;</>;
-  }
+class Wheel extends React .Component{
+    render(){
+        return <><p>I have 4 wheels.</p></>;
+    }
 }
+
 
 class Car extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { brand: "Toyota" };
+    constructor (props) {
+      super(props);
+      this.state = { brand : "toyota" };
+    }
+    changBrand = (msg)=>{
+        this.setState({ brand: "Mazda"});
+        alert(msg)
+    };
+    render(){
+        return (
+        <>
+            <wheel />
+          <p>
+            My car is <span >{this.state.brand}</span>,{this.props.age}
+            <br />
+            Eye color is {this.props.eye}
+          </p>
+          <button onClick={() => this.changBrand("Hi !!")}>Click Me !! </button>
+        </>
+      );
+    }
   }
-  changeBrand = () => {
-    this.setState({ brand: "Mazda" });
-    alert(msg);
-  };
-  render() {
-    return (
-      <>
-        <Wheel />
-        <p>
-          My car is <span>{this.state.brand}</span>, {this.props.age}
-          <br />
-          Eye color is {this.props.eye}
-        </p>
-        <button onClick={() => this.changeBrand("Hi !!")}>Click Me !!</button>
-      </>
-    );
-  }
-}
 
-export default Car;
+  export default Car;
